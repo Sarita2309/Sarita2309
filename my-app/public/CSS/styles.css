@@ -1,7 +1,22 @@
 
 
-/*****SLIDER****************/
+/************SLIDER****************/
 .item-slider{
     height:700px;
-    
+    background: url('/images/covers/cover_1.jpg');
+    background-size: cover;  
+}
+
+.caption{
+    color:whitesmoke;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    right:0px;
+    padding:5px;
+    text-align: right;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.item-slider > .item-slider > h4{
+    font-weight: 300px;   
 }

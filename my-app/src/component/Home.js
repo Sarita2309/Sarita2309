@@ -1,5 +1,6 @@
 import React, { Component} from 'react';
 import Featured from'./Featured';
+import Subscriptions from './subscriptions';
 
 const URL_HOME = 'http://localhost:3004/home';
 
@@ -23,7 +24,10 @@ class Home extends Component {
     
     render(){
         return(
-            <div><Featured slides={this.state.home.slider}/></div>
+            <div>
+                <Featured slides={this.state.home.slider}/>
+                <Subscriptions/>
+            </div>
         )
     }
 }

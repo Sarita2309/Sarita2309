@@ -18,13 +18,13 @@ var generateSlides =({slides}) => {
           <Slider {...setting}>
             {slides.map((item)=>{
               return(
-                <div key={item.id} className="item-slider" style={{background:`url(/public/images/covers/${item.cover})`}}>
+              <div key={item.id} className="item-slider" >
                 
                 <div className="caption">
                     <h4>{item.title}</h4>
                     <p>{item.topic}</p>
                 </div>
-                </div>
+              </div>
               )
               
             })}
