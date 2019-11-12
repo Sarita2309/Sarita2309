@@ -14,8 +14,13 @@ class ProductList extends Component{
              
                <ProductConsumer>   
                   {(value)=>{
-                     return value.products.map((item) => {
-                       return <Product key={item.id} prdct={item}  openModal={item.openModal}/>                     
+                    const {id}= value;
+                     return  value.products.map((item) => {
+                       return (
+                         <div>
+                         <Product key={item.id} prdct={item} value={value} /*onHandleDetail={value.product}*/ />   
+                         </div>                       
+                       )                  
                      });
                    }}
                </ProductConsumer>

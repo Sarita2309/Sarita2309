@@ -13,8 +13,8 @@ cursor: pointer;
     color: white;
 }
 `
- {/*we can also pass props to the styled component like we have passed props to the background if cart props is available or not...
- this props is passed from detail component*/}
+ /*we can also pass props to the styled component like we have passed props to the background if cart props is available or not...
+ this props is passed from detail component*/
 export const ButtonContainer = styled.button`
 background: #236666;
 color:#99ffff;

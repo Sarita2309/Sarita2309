@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
-import {ProductConsumer} from '../context';
+
 import PropTypes from 'prop-types';
 
 
@@ -9,22 +9,24 @@ import PropTypes from 'prop-types';
 export default class Product extends Component{
     render(){ 
         const { id, title, img, price, company, info, inCart } = this.props.prdct;
+        const { handleDetail,openModal} = this.props.value;
+        
         return(
         <div>
-             <button onClick={()=>console.log(id)}>id</button>
+         
             <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">              
                 <div className="card">
                   {/* we have added Product Consumer so that we can use function defined in the value of context.js*/}
-                  
-                    <div className="img-container p-5" onClick={()=>console.log("image container from product")}>
+                  <button onClick={()=>console.log(id)}>id</button>
+                    <div className="img-container p-5" onClick={()=>handleDetail(id)}>
                     {/*onClick={()=>console.log("click card")If we donot write an arrow fn thn wenever 
                        click on Product or on icon, it will click 8 times but no response wen click on image*/ }
                       <Link to="/details">
                         <img src={img} /* HERE IMAGES are IN PUBLIC FOLDER WITH NAMED IMG */alt="product" className="card-img-top"/> 
                       </Link>
-                      <button className="cart-btn"/*when item is already added in cart, nothing will happen i.e. btn will be disabled
+                      <button onClick={() => openModal(id)} className="cart-btn"/*when item is already added in cart, nothing will happen i.e. btn will be disabled
                       but wen item isnot in the cart, this btn will be active
-                      */ disabled={inCart?true:false} onClick={() => this.props.openModal} >
+                      */ disabled={inCart?true:false} >
                         {inCart?(<p className="text-capitalize mb-0" disabled>in inCart</p>):(<i className="fas fa-cart-plus"></i>)}
                       </button>
                     </div>  
@@ -97,5 +99,4 @@ const ProductWrapper = styled.div`
     transform:translate(0,0);
     transition:all 1s linear;
 }
-
 `

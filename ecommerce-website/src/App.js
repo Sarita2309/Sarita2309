@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import Navbar from './component/Navbar';
 import ProductList from './component/ProductList';
 import Details from './component/Details';
-import Cart from './component/Cart';
+import Cart from './component/cart/Cart';
 import Default from './component/Default';
-import {Switch, Route, Link} from 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Modal from './component/Modal';
 
