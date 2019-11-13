@@ -1,6 +1,8 @@
 import React, { Component} from 'react';
 import Featured from'./Featured';
 import Subscriptions from './subscriptions';
+import Blocks from './Blocks';
+import Poll from './poll';
 
 const URL_HOME = 'http://localhost:3004/home';
 
@@ -16,8 +18,7 @@ class Home extends Component {
     componentDidMount(){
         fetch(URL_HOME, {method:'GET'})
         .then(response => response.json())
-        .then( json =>{
-           
+        .then( json =>{   
             this.setState ({home: json})
         })
     }
@@ -27,6 +28,8 @@ class Home extends Component {
             <div>
                 <Featured slides={this.state.home.slider}/>
                 <Subscriptions/>
+                <Blocks blocks={this.state.home.blocks}/>
+                <Poll/>
             </div>
         )
     }

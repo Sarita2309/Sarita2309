@@ -57,7 +57,7 @@ class Subscriptions extends Component{
             <div className="subscribe-panel">
                <h3> Subscribe to US </h3>
                <form onSubmit = {this.handleSubmit}>
-                  <input 
+                  <input className="input-text"
                   type="text" 
                   placeholder="youremail@email.com" 
                   value={this.state.email}
