@@ -2,8 +2,8 @@
 
 /************SLIDER****************/
 .item-slider{
-    height:700px;
-    background: url('/images/covers/cover_1.jpg');
+    height:70px;
+    /*background: url('/images/covers/cover_1.jpg');*/
     background-size: cover;  
 }
 
@@ -20,3 +20,52 @@
 .item-slider > .item-slider > h4{
     font-weight: 300px;   
 }
+.subscribe-panel{
+    text-align: center;
+    width: 350px;
+    margin: 0 auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.input-text{
+    padding: 5px;
+    border-radius: 30px;
+    border: 1px solid #dddddd;
+    text-align: center;
+    width: 200px
+}
+.home_blocks{
+     display: flex;
+}
+.image{
+    height: 400px;
+    width: 400px;
+}
+
+/*****************POLL ITEM********************/
+
+.home_Poll{
+   width: 70%;
+   margin: 0 auto ;
+   text-align: center; 
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.poll_container{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+.poll_item{
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 15px;
+}
+
+.poll_item > img{
+    height: 50px;
+    width: 50px;
+    
+    
+}
+
